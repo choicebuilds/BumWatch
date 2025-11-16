@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "BNO055")(type "KiCad")(uri "/Users/djaeyoung/Documents/Smartwatch/Symbols/BNO055/BNO055.pretty")(options "")(descr ""))
+)
