@@ -250,24 +250,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "power_pin_not_driven|1181100|901700|1693a122-61bc-474c-b331-8629c91d0dfe|00000000-0000-0000-0000-000000000000|/a0ea0b49-a061-40ab-b118-d7d871219b71|/a0ea0b49-a061-40ab-b118-d7d871219b71|",
-        ""
-      ],
-      [
-        "power_pin_not_driven|1244600|952500|1693a122-61bc-474c-b331-8629c91d0dfe|00000000-0000-0000-0000-000000000000|/a0ea0b49-a061-40ab-b118-d7d871219b71|/a0ea0b49-a061-40ab-b118-d7d871219b71|",
-        ""
-      ],
-      [
-        "power_pin_not_driven|1435100|1257300|f2a68644-708a-43f5-8e0b-02eb87cd7ebb|00000000-0000-0000-0000-000000000000|/a0ea0b49-a061-40ab-b118-d7d871219b71|/a0ea0b49-a061-40ab-b118-d7d871219b71|",
-        ""
-      ],
-      [
-        "power_pin_not_driven|1485900|1219200|f2a68644-708a-43f5-8e0b-02eb87cd7ebb|00000000-0000-0000-0000-000000000000|/a0ea0b49-a061-40ab-b118-d7d871219b71|/a0ea0b49-a061-40ab-b118-d7d871219b71|",
-        ""
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -637,6 +620,14 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "space_save_all_events": true,
