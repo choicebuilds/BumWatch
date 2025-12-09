@@ -1,6 +1,6 @@
 # BumWatch
 
-THIS WATCH CONSISTS ENTIRELY OF BREAKOUT BOARDS AND IN-HOUSE FABRICATED PCBs. Easier place to start (if that's what you want), but it's not the final version. See the final product here: Github coming soon (private atm)
+THIS WATCH CONSISTS ENTIRELY OF BREAKOUT BOARDS AND IN-HOUSE FABRICATED PCBs. I was unable to make this version work on a PCB due to voltage regulator issues. If you plan on replicating this project, please do yourself a favor and add a functional buck converter. I created a significantly improved version, see the final product here: will add Github link once done
 
 ## Introduction
 
@@ -12,7 +12,7 @@ The BumWatch provides the satisfaction of progress through step counting that up
 
 *insert picture here*
 
-This iteration of the BumWatch is made entirely in-house and costed $0 (not including time and labor). The BumWatch consists entirely of breakout boards (that I borrowed) placed and stacked neatly and soldered to a custom-PCB that was created using in-house PCB fabrication machines. Although I would never recommend this method (due to problems I will address as we go on), it was fun planning and watching everything come to fruition.
+This iteration of the BumWatch is made entirely in-house and costed $0 (not including time and labor). The BumWatch consists entirely of breakout boards (that I borrowed) placed and stacked neatly and soldered to a custom-PCB that was created using in-house PCB fabrication machines (I could not complete this part, so I used protoboards). Although I would never recommend this method (due to problems I will address as we go on), it was fun planning and watching everything come to fruition.
 
 ## PCB Fabrication
 Essentially, you can use any electrical CAD software (I used KiCAD) to create a schematic and layout. Then, you export the Front Side Copper (gbr), Back Side Copper (gbr), Edge Cuts (gbr), and Drill Files (drl). Why only these four? Well, the available PCB fabrication machines in-house (LPKF Protomat and Protolaser) from my local makerspace makes it extremely limited for a few reasons:
@@ -28,7 +28,7 @@ The time and effort spent on laying it out and assembling it highly outweighs ju
 ## Materials
 
 1x Arduino Pro Mini (MUST BE 3.3V Version)
-- Small lipo batteries usually say they supply 3.7V. However, it will drop down from 4.2V when fully charged to 3.0V when fully discharged until it eventually gives out. So, either the breakouts must be rated within the 3.0V-4.2V range or we must use a voltage regulator/buck converter. Nevertheless, it has to be a 3.3V rated version unless you use a step-up converter that can supply 5V.
+- Small lipo batteries usually say they supply 3.7V. However, it will drop down from 4.2V when fully charged to 3.0V when fully discharged until it eventually gives out. So, either the breakouts must be rated within the 3.0V-4.2V range or we must use a voltage regulator/buck converter. Nevertheless, it has to be a 3.3V rated version unless you use a step-up converter that can supply 5V. Update: the voltage regulator on this one also had a 1V-1.1V dropout, so everything did not work as intended.
 
 1x SSD1306 (4-pin display)
 - This was the only display I could find that fit my desired form factor that I could find in-person. There were many more options online, but I settled on this one since this version of the watch is not exactly the final version I want to use (i.e. I did not care).
@@ -52,7 +52,7 @@ The time and effort spent on laying it out and assembling it highly outweighs ju
 - Essentially, you can use this to charge/discharge your battery. It's only supports charging though, you do not use this to update your Arduino firmware. And also, it just works (to be fair, all the Sparkfun sensors had more complex wiring diagrams)
 
 1x 3.3V Voltage Regulator
-- I got this from my local makerspace and it was bought in bulk from China.. yeah, it was really, REALLY bad. The voltage drop after connecting one sensor was so large my multimeter displayed <3V (???). Luckily, all the sensors here except the BMP085 were rated 3V-5.5V, so I did not need this voltage regulator (i.e. I could connect it directly to the battery since it will always stay within 3V-4.2V). Due to this garbage of a regulator, I had to redo my entire layout and print entire new circuit boards just because this voltage regulator was so bad (rant over). Why not use a buck converter? Simplicity of course. Also, this only crossed my mind after I created a layout that fit the smartwatch form factor. And considering this was not even the final version, I just could not bother to waste any more time on this.
+- I got this from my local makerspace and it was really, REALLY bad. The voltage drop after connecting one sensor was so large my multimeter displayed <3V (???). Luckily, all the sensors here except the BMP085 were rated 3V-5.5V, so I did not need this voltage regulator (i.e. I could connect it directly to the battery since it will always stay within 3V-4.2V.. update: the pro mini also had a terrible voltage regulator that outputted something along 2.7V). Due to this garbage of a regulator, I had to redo my entire layout and print entire new circuit boards just because this voltage regulator was so bad (rant over). Why not use a buck converter? Simplicity of course. Also, this only crossed my mind after I created a layout that fit the smartwatch form factor. And considering this was not even the final version, I just could not bother to waste any more time on this. Please use a buck converter.
 
 1x 3.7V LiPo Battery
 - Pretty self-explanatory here, just find one that's not a coincell battery and is small enough to fit inside your watch.
@@ -86,7 +86,7 @@ If I did not have to redesign everything due to my voltage regulator, this would
 
 ## Conclusion
 
-There are a lot of issues with this product. But all in all, with the fixes I mentioned above, I was able to create a functional product that works as intended. If anyone wants to expand upon this, I would definitely introduce a buck converter (step up if you wanna use 5V Arduinos, step down if you intend to use the pressure sensor or want consistent 3.3V output). Also, I would lay it out more compactly and properly with a professional PCB. Finally, the mechanical CAD is very bare-bones - there's much to improve in this aspect. I am satisfied with what I made since it was only a stepping stone to something bigger. I believe replicating this project as-is and making a working final product would be very helpful if you want to sharpen your debugging skills (please don't, you'll lose your hair over this).
+There are a lot of issues with this product. But all in all, with the fixes I mentioned above, I was able to create a functional product that works as intended, albeit not on the PCB. If anyone wants to expand upon this, please use a buck converter (step up if you wanna use 5V Arduinos, step down if you intend to use the pressure sensor or want consistent 3.3V output). Also, I would lay it out more compactly and properly with a professional PCB. Finally, the mechanical CAD is very bare-bones - there's much to improve in this aspect. I am satisfied with what I made since it was only a stepping stone to something bigger. I believe replicating this project as-is and making a working final product would be very helpful if you want to sharpen your debugging skills (please don't, you'll lose your hair over this).
 
 ## Video
 
