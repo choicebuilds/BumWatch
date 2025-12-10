@@ -76,7 +76,11 @@ You can stack the breakout boards together to reduce space. Also, you can cut th
 
 This part is extremely simple - it was a matter of copying preexisting libraries from the breakout boards and piecing them together. Here are the libraries for reference:
 
-*list libraries*
+Display: https://github.com/adafruit/Adafruit_SSD1306
+IMU: https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary
+HR Sensor: https://github.com/sparkfun/SparkFun_Bio_Sensor_Hub_Library
+Pressure Sensor: https://github.com/adafruit/Adafruit-BMP085-Library
+Vibration Motor: https://github.com/adafruit/Adafruit_DRV2605_Library
 
 The only difficult part was processing the IMU data and creating a step counting algorithm. With the help of AI, I essentially combined the movement of all axes and if that was greater than a certain threshold, it was counted as a step. Then, I set a cooldown period based on the average human step pace in order to avoid double counting. This only works if the user is actively swinging their arms while walking - putting your hands in your pocket would lead to inaccurate results. Considering this is a first prototype, I was satisfied with this.
 
@@ -87,7 +91,3 @@ If I did not have to redesign everything due to my voltage regulator, this would
 ## Conclusion
 
 There are a lot of issues with this product. But all in all, with the fixes I mentioned above, I was able to create a functional product that works as intended, albeit not on the PCB. If anyone wants to expand upon this, please use a buck converter (step up if you wanna use 5V Arduinos, step down if you intend to use the pressure sensor or want consistent 3.3V output). Also, I would lay it out more compactly and properly with a professional PCB. Finally, the mechanical CAD is very bare-bones - there's much to improve in this aspect. I am satisfied with what I made since it was only a stepping stone to something bigger. I believe replicating this project as-is and making a working final product would be very helpful if you want to sharpen your debugging skills (please don't, you'll lose your hair over this).
-
-## Video
-
-*insert video link*
