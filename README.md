@@ -1,6 +1,6 @@
 # BumWatch
 
-THIS WATCH CONSISTS ENTIRELY OF BREAKOUT BOARDS AND IN-HOUSE FABRICATED PCBs. I was unable to make this version work on a PCB due to voltage regulator issues. So, I switched to the protoboard. If you plan on replicating this project, please do yourself a favor and add a functional buck converter. I created a significantly improved version, see the final product here: will add Github link once done
+THIS WATCH CONSISTS ENTIRELY OF BREAKOUT BOARDS AND IN-HOUSE FABRICATED PCBs. I was unable to make this version work on a PCB due to voltage regulator issues. So, I switched to the protoboard. If you plan on replicating this project, please do yourself a favor and add a functional buck converter. I created a significantly improved version here: https://github.com/choicebuilds/JWatch
 
 ## Introduction
 
