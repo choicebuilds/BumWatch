@@ -57,6 +57,9 @@ The time and effort spent on laying it out and assembling it highly outweighs ju
 1x 3.7V LiPo Battery
 - Pretty self-explanatory here, just find one that's not a coincell battery and is small enough to fit inside your watch.
 
+1x On/Off Switch
+- This can be any switch. It essentially creates an open circuit between the battery and all the sensors in order to save power when not used.
+
 1x FTDL Basic Breakout (USB to Serial Converter)
 - THIS IS NOT APART OF THE WATCH. The Arduino pro mini does not have a convenient port to update the firmware. So, you actually need this breakout to be able to push your Arduino sketches into the Arduino pro mini.
 
@@ -87,6 +90,12 @@ The only difficult part was processing the IMU data and creating a step counting
 ## Mechanical CAD (3D Printing)
 
 If I did not have to redesign everything due to my voltage regulator, this would have looked much better. However, due to the frustration of everything stated above, I just created a bare minimum chassis for a working demo.
+
+## Protoboarding
+
+With all the power issues, I still wanted to make a final product. So, I decided to create a 4-layer protoboard watch in order to fit a watch form factor. After hours of soldering, I got tired of continuity testing. This ultimately meant I could not use half the sensors because there were continuity issues for my lower 2 layers. However, I was still able to create a working IMU and step counter. This product is no longer in development & I will be focusing all my efforts on the JWatch (link above). Here are some pictures for reference:
+
+*insert pictures*
 
 ## Conclusion
 
