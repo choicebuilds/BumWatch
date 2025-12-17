@@ -10,7 +10,7 @@ We live in a world full of distractions and bum-inducing items. Technology is sp
 
 The BumWatch provides the satisfaction of progress through step counting that updates live to provide instant gratification and feedback. Also, knowing the average resting heart rate is 60-100, this would motivate the bums to lower their heartrate through exercise because they become aware they are a bum. Finally, when the bum idles for too long, there is a vibration feedback that reminds them they are a bum. If you want to stop being a bum, there is no better method than to create this watch.
 
-<img src="https://github.com/choicebuilds/BumWatch/tree/main/pictures/IMG_6111.jpg" alt="BumWatch" width="200"/>
+<img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6111.jpg" alt="BumWatch" width="600"/>
 
 This iteration of the BumWatch is made entirely in-house and costed $0 (not including time and labor). The BumWatch consists entirely of breakout boards (that I borrowed) placed and stacked neatly and soldered to a custom-PCB that was created using in-house PCB fabrication machines (I could not complete this part, so I used protoboards). Although I would never recommend this method (due to problems I will address as we go on), it was fun planning and watching everything come to fruition.
 
@@ -24,6 +24,10 @@ Is it still doable? Absolutely.
 Does it look cooler? Absolutely (lie).
 Will I ever do it again? Absolutely NOT.
 The time and effort spent on laying it out and assembling it highly outweighs just ordering a PCB from say JLCPCB. I was unable to do this since I was not able to order them on time (due to US customs taking forever) and falling victim to sunk cost.
+
+<img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6122.jpg" alt="PCBv1" width="300"/> <img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6123.jpg" alt="PCBv2" width="300"/>
+
+We'll get to why I had to make two iterations (yet still failed to make the final version) down the line.
 
 ## Materials
 
@@ -68,10 +72,19 @@ The time and effort spent on laying it out and assembling it highly outweighs ju
 This part was a massive headache. I've soldered on a PCB with no solder mask or silkscreen before, but this one just caused a lot more problems than I would have liked. This was exponentially harder than the one I made before due to a lot of issues:
 
 1. Not everything is connected in the layout - the first layout was perfect and everything would have worked out if the voltage regulator did not have problems. However, the second layout was made throughout an all-nighter the day before my local makerspace was going to close. I thought of a brilliant plan to bypass vias because things were not connecting properly on time. Instead of connecting everything on the back side, I decided to connect all my 3.7V on the front side and create a singular via with a very short wire and solder to connect the front and back side. This only works if there are vias for every 3.7V holes. Since the makerspace was closed, I could not make another PCB with a proper layout.
+<img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6125.jpg" alt="PCB F.CU" width="600"/>
+
 2. Misplaced sensors and improper traces - I flipped the pressure sensor backwards (it was right the first time, I don't even know how this happened) and the 3.7V on the voltage regulator comes straight from the battery instead of the on/off switch. I decided to add an on/off switch last minute, and I probably should not have made major changes before the deadline.
+<img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6081.jpg" alt="Flipped Sensor" width="600"/>
+
 3.  The pins are pre-soldered onto the breakout - this should not have been a problem if problems 1 and 2 did not exist. However, in order to connect the 3.7V on the front side and remove a few pins to make layout easier (and more compact), I had to unsolder the pins and resolder them back together to connect them properly. Lesson learned - always, always double check your design before fabrication and do not trust your brain during an all-nighter.
+<img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6083.jpg" alt="Pre-soldered Pins" width="600"/>
+
 4. The through-hole copper is fragile - since I was not sure I had access to flux after the makerspace closed, I sanded the final PCB very hard with sandpaper over running water to prevent oxidation. Bad idea. After soldering, the copper surrounding the all the through-holes would fall off with the sensors if I yanked too hard. Either that or it probably happened due to having to unsolder/resolder many things due to the issues mentioned above. So, I had to manually create traces whenever this happened.
+<img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6082.jpg" alt="Fragile Traces" width="600"/>
+
 5. Continuity Issues - I learned from the previous PCB I fabricated to make huge clearances. However, I finished half of it and came back after a week to realize there were my GND was connected to my SCL pin for some reason (?). After using an exacto knife to scratch around every single contact point, it was not a problem; but, the lack of solder mask and silkscreen is truly a pain.
+<img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6127.jpg" alt="Continuity Issues" width="600"/>
 
 You can stack the breakout boards together to reduce space. Also, you can cut the wires after soldering them to make them take up less space.
 
@@ -89,13 +102,15 @@ The only difficult part was processing the IMU data and creating a step counting
 
 ## Mechanical CAD (3D Printing)
 
-If I did not have to redesign everything due to my voltage regulator, this would have looked much better. However, due to the frustration of everything stated above, I just created a bare minimum chassis for a working demo.
+If I did not have to redesign everything due to my voltage regulator, this would have looked much better. However, due to the frustration of everything stated above, I just created a bare minimum chassis for a working demo. Even then, it turns out I printed the wrong size before the 3D printing station had to shut down due to it being the end of the semester. Oh well.
 
 ## Protoboarding
+<img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6124.jpg" alt="BumWatch" width="600"/>
 
 With all the power issues, I still wanted to make a final product. So, I decided to create a 4-layer protoboard watch in order to fit a watch form factor. After hours of soldering, I got tired of continuity testing. This ultimately meant I could not use half the sensors because there were continuity issues for my lower 2 layers. However, I was still able to create a working IMU and step counter. This product is no longer in development & I will be focusing all my efforts on the JWatch (link above). Here are some pictures for reference:
 
-*insert pictures*
+<img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6112.jpg" alt="BumWatch" width="200"/> <img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6113.jpg" alt="BumWatch" width="200"/>
+<img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6114.jpg" alt="BumWatch" width="200"/> <img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6115.jpg" alt="BumWatch" width="200"/>
 
 ## Conclusion
 
