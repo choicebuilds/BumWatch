@@ -117,5 +117,5 @@ With all the power issues, I still wanted to make a final product. So, I decided
 There are a lot of issues with this product. But all in all, with the fixes I mentioned above, I was able to create a functional product that works as intended, albeit not on the PCB. If anyone wants to expand upon this, please use a buck converter (step up if you wanna use 5V Arduinos, step down if you intend to use the pressure sensor or want consistent 3.3V output). Also, I would lay it out more compactly and properly with a professional PCB. Finally, the mechanical CAD is very bare-bones - there's much to improve in this aspect. I am satisfied with what I made since it was only a stepping stone to something bigger. I believe replicating this project as-is and making a working final product would be very helpful if you want to sharpen your debugging skills (please don't, you'll lose your hair over this).
 
 ## Working Demo
-[<img src="https://img.youtube.com/vi/a5TLYJGubqg/hqdefault.jpg" width="600" height="300"/>](https://youtu.be/embed/a5TLYJGubqg)
+[<img src="https://img.youtube.com/vi/a5TLYJGubqg/hqdefault.jpg" width="600" height="300"/>](https://www.youtube.com/watch?v=a5TLYJGubqg)
 
