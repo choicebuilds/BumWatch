@@ -2,6 +2,8 @@
 
 THIS WATCH CONSISTS ENTIRELY OF BREAKOUT BOARDS AND IN-HOUSE FABRICATED PCBs. I was unable to make this version work on a PCB due to voltage regulator issues. So, I switched to the protoboard. If you plan on replicating this project, please do yourself a favor and add a functional buck converter. I created a significantly improved version here: https://github.com/choicebuilds/JWatch
 
+<img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6111.jpg" alt="BumWatch" width="600"/>
+
 ## Introduction
 
 The Bumwatch is truly made for bums - it has all the features a bum needs and nothing else. A very minimalistic display displays two things - steps taken and their heart rate that updates every second. 
@@ -9,8 +11,6 @@ The Bumwatch is truly made for bums - it has all the features a bum needs and no
 We live in a world full of distractions and bum-inducing items. Technology is specifically designed to make our lives easier, which is synonymous with making us more of a bum. Instead of bleeding-edge features, what a bum needs is an accountability partner that gives them only what they truly need.
 
 The BumWatch provides the satisfaction of progress through step counting that updates live to provide instant gratification and feedback. Also, knowing the average resting heart rate is 60-100, this would motivate the bums to lower their heartrate through exercise because they become aware they are a bum. Finally, when the bum idles for too long, there is a vibration feedback that reminds them they are a bum. If you want to stop being a bum, there is no better method than to create this watch.
-
-<img src="https://github.com/choicebuilds/BumWatch/blob/main/pictures/IMG_6111.jpg" alt="BumWatch" width="600"/>
 
 This iteration of the BumWatch is made entirely in-house and costed $0 (not including time and labor). The BumWatch consists entirely of breakout boards (that I borrowed) placed and stacked neatly and soldered to a custom-PCB that was created using in-house PCB fabrication machines (I could not complete this part, so I used protoboards). Although I would never recommend this method (due to problems I will address as we go on), it was fun planning and watching everything come to fruition.
 
